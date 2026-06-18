@@ -222,7 +222,7 @@ with tab1:
 
     st.subheader("Performance Distribution")
 
-    fig, ax = plt.subplots()
+    fig, ax = plt.subplots(figsize=(5, 1.8))
 
     df["Performance"].value_counts().plot(
         kind="bar",
@@ -232,7 +232,7 @@ with tab1:
     ax.set_xlabel("Performance")
     ax.set_ylabel("Students")
 
-    st.pyplot(fig)
+    st.pyplot(fig, use_container_width=False)
 
 # =====================================
 # STUDY HOURS TAB
@@ -242,8 +242,7 @@ with tab2:
 
     st.subheader("Study Hours Distribution")
 
-    fig, ax = plt.subplots()
-
+    fig, ax = plt.subplots(figsize=(5, 3))
     ax.hist(
         df["Study_Hours"],
         bins=15
@@ -252,7 +251,7 @@ with tab2:
     ax.set_xlabel("Study Hours")
     ax.set_ylabel("Students")
 
-    st.pyplot(fig)
+    st.pyplot(fig, use_container_width=False)
 
 # =====================================
 # ATTENDANCE TAB
@@ -262,8 +261,7 @@ with tab3:
 
     st.subheader("Attendance Distribution")
 
-    fig, ax = plt.subplots()
-
+    fig, ax = plt.subplots(figsize=(5, 3))
     ax.hist(
         df["Attendance"],
         bins=15
@@ -272,7 +270,7 @@ with tab3:
     ax.set_xlabel("Attendance (%)")
     ax.set_ylabel("Students")
 
-    st.pyplot(fig)
+    st.pyplot(fig, use_container_width=False)
 
 # =====================================
 # SCORES TAB
